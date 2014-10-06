@@ -1,6 +1,7 @@
 require 'active_support'
 require 'active_support/core_ext'
 require 'psych'
+require 'erb'
 
 class Retrobot
   class Config
@@ -61,7 +62,8 @@ class Retrobot
     def retry_count;    @options[:retry_count].to_i; end
 
     def load_yaml_file!(path)
-      @options.merge! Psych.load_file(path.to_s).symbolize_keys
+      yaml = ERB.new(File.read(path.to_s)).result
+      @options.merge! Psych.load(yaml).symbolize_keys
     end
   end
 end
