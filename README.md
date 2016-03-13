@@ -68,5 +68,19 @@ or you can run it as a daemon as follows:
 $ bin/retrobotctl [start|stop] -- -c /path/to/retrobot.yml
 ```
 
+### Or using Docker
+Put `tweets/tweets.csv` on your host machine.
+
+```shell
+docker pull morishin127/retrobot
+```
+```shell
+docker run -d -e "TWITTER_CONSUMER_KEY=****" \
+-e "TWITTER_CONSUMER_SECRET=****" \
+-e "TWITTER_ACCESS_TOKEN=****" \
+-e "TWITTER_ACCESS_SECRET=****" \
+-v /your/path/tweets:/app/tweets morishin127/retrobot
+```
+
 ## License
 Copyright (c) 2016 Issei Naruta. Retrobot is released under the MIT License.
