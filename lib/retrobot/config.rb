@@ -26,7 +26,7 @@ class Retrobot
 
     DEFAULTS = {
       tweets_csv: './tweets/tweets.csv',
-      retro_days: 365,
+      retro_days: 366, # leap year adjustment
       retweet: false,
       debug: false,
       dryrun: false,
