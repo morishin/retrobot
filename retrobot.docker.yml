@@ -1,0 +1,12 @@
+# tweets_csv: tweets/tweets.csv (default)
+consumer_key: <%= ENV['TWITTER_CONSUMER_KEY'] %>
+consumer_secret: <%= ENV['TWITTER_CONSUMER_SECRET'] %>
+access_token: <%= ENV['TWITTER_ACCESS_TOKEN'] %>
+access_secret: <%= ENV['TWITTER_ACCESS_SECRET'] %>
+# retro_days: 365 (default=365 / how days long ago do you want to see? / in N days ago)
+# retweet: false (default)
+# debug: false (default)
+# dryrun: false (default)
+# add_in_reply_to_url: false (default=false / add url of in_reply_to into the tweet)
+# remove_hashtag: false (default=false / remove hashtag the tweet)
+# suppress_pattern: '@\w+' (default=nil / regular expression for tweet text which you don't need to tweet)
